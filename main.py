@@ -1,24 +1,131 @@
 import numpy as np
 
-#intervalo [0,1)
-print(np.random.randint(2))
+#uma única dimensão
+array = np.arange(1, 19)
+print (array)
+#exibe (18, ). O "nada" depois da virgula indica um array de unica
+#dimensao com 18 valores
+print (array.shape)
 print('***********')
-#intervalo [0,1), ou seja, só pode dar zero!
-print(np.random.randint(1))
+#exibe (18, 1)
+#viu a importancia do nada que segue a virgula
+#no primeiro exemplo?
+print (array.reshape(18, 1).shape)
 print('***********')
-#intervalo [0, 10]
-print (np.random.randint(0,11))
+#exibe (2, 9)
+print(array.reshape(2, 9).shape)
 print('***********')
-#intervalo [2, 4]
-print(np.random.randint(2, 5))
+#exibe (9, 2)
+print (array.reshape(9, 2).shape)
 print('***********')
+#exibe (3, 2, 3)
+print (array.reshape(3, 2, 3).shape)
+
+# inteiros = np.random.randint(1, 6, 5)
+# #dtype é propriedade, não é uma função
+# print (f'A coleção inteiros armazena valores do tipo: {inteiros.dtype}')
+# print('***********')
+# #duas dimensões, 2 linhas, 6 colunas
+# #valores no intervalo [0, 1)
+# reais = np.random.randn(2, 6)
+# print (f'A coleção reais armazena valores do tipo: {reais.dtype}')
+
+
+# #1 dimensão, 10 elementos
+# array =  np.random.randint (1, 21, 10)
+# print (array)
+# print (f'array[{array.argmax()}]={array.max()}')
+# print (f'array[{array.argmin()}]={array.min()}')
+#
+# matriz = np.random.randint(1, 21, (2, 5))
+# print (matriz)
+# print (f'matriz[{matriz.argmax()}]={matriz.max()}')
+# print (f'matriz[{matriz.argmin()}]={matriz.min()}')
+
+
+# #1 dimensão, 10 elementos
+# array = np.random.randint(1, 100, 10)
+# print (array)
+# print (f'max: {array.max()}, min: {array.min()}')
+# print('***********')
+# #2 dimensões, 2 linhas, 5 colunas
+# matriz = np.random.randint(1, 100, (2, 5))
+# print (matriz)
+# print (f'max: {matriz.max()}, min: {matriz.min()}')
+
+
+
+# #1, 2, 3, ..., 18
+# array = np.arange(1, 19)
+# print (array)
+# print('***********')
+# #3 arrays de 3 linhas e 2 colunas
+# print (array.reshape(3, 3, 2))
+# print('***********')
+# #3 arrays de 1 linha e 6 colunas
+# print (array.reshape(3, 1, 6))
+
+# #1, 2, ..., 10
+# array = np.arange(1, 11)
+# print (array)
+# print('***********')
+# #2x5
+# #tupla ou valores "avulsos"
+# print (array.reshape(2,5))
+# #ou assim
+# #aqui precissa ser uma tupla
+# # print (np.reshape(array, (2, 5)))
+# # print('***********')
+# # #5x2
+# # print (array.reshape(5,2))
+# # #não dá, pois 3x4 = 12 != 10 = len(array)
+# # print (array.reshape(3,4))
+
+
+
+
+
+
+
+
+
+
+
+# print (np.arange(1, 2))
+
+# #chamar só uma vez, antes de produzir valores pseudoaleatórios
+# #42 é a resposta para tudo
+# #use qualquer número, basta que seja o mesmo a cada execução
+# np.random.seed(42)
+#
+# #vale para inteiros
+# print (np.random.randint(5))
+# print('***********')
+# #para reais também
+# print (np.random.rand(5))
+# print('***********')
+# #para qualquer distribuição
+# print (np.random.randn(5))
+
+# #intervalo [0,1)
+# print(np.random.randint(2))
+# print('***********')
+# #intervalo [0,1), ou seja, só pode dar zero!
+# print(np.random.randint(1))
+# print('***********')
+# #intervalo [0, 10]
+# print (np.random.randint(0,11))
+# print('***********')
+# #intervalo [2, 4]
+# print(np.random.randint(2, 5))
+# print('***********')
 #array de 10 posições
 #intervalo [1, 10]
-print (np.random.randint(1, 11, 10))
-print('***********')
-#matriz 2x3, use uma tupla!
-#intervalo [1,5]
-print (np.random.randint(1, 6, (2,3)))
+# print (np.random.randint(1, 11, 10))
+# print('***********')
+# #matriz 2x3, use uma tupla!
+# #intervalo [1,5]
+# print (np.random.randint(1, 6, (2,3)))
 
 
 #semelhante à função rand
